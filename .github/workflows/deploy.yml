@@ -13,15 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.x
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
 
-    - run: npm install
+      - run: npm install
+
       - name: Publish
         if: success() && startsWith( github.ref, 'refs/tags/')
         run: npm run deploy
