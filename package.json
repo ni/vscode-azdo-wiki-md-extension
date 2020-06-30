@@ -47,12 +47,10 @@
 				}
 			}
 		},
-		"commands": [
-			{
-				"command": "extension.insertAzDOUserGUID",
-				"title": "Insert AzDO User GUID"
-			}
-		]
+		"commands": [{
+			"command": "extension.insertAzDOUserGUID",
+			"title": "Insert AzDO User GUID"
+		}]
 	},
 	"main": "./out/extension.js",
 	"scripts": {
@@ -60,7 +58,7 @@
 		"compile": "tsc -p ./",
 		"lint": "eslint . --ext .ts,.tsx",
 		"watch": "tsc -watch -p ./",
-		"deploy": "vsce publish --yarn"
+		"deploy": "vsce publish"
 	},
 	"devDependencies": {
 		"@types/markdown-it": "^10.0.1",
