@@ -1,7 +1,7 @@
 {
 	"name": "azdo-wiki-md",
 	"version": "0.0.1",
-	"displayName": "Azure DevOps Markdown",
+	"displayName": "Azure DevOps Wiki Markdown",
 	"description": "A VS Code extension that makes your local editing of Azure DevOps Wiki files easier.",
 	"keywords": [
 		"markdown",
@@ -29,7 +29,7 @@
 		"markdown.markdownItPlugins": true,
 		"configuration": {
 			"type": "object",
-			"title": "Azure DevOps Markdown",
+			"title": "Azure DevOps Wiki Markdown",
 			"properties": {
 				"azdo-wiki-md.token": {
 					"type": [
