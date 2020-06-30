@@ -1,0 +1,22 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+    - master
+  release:
+    types:
+    - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Publish
+      if: success() && startsWith( github.ref, 'refs/tags/releases/')
+      run: npm run deploy
+      env:
+        VSCE_PAT: $
