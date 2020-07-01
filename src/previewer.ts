@@ -25,7 +25,7 @@ export function getPreviewer(azdoInfo: AzDOGUIDInfo) {
       const tokens = globalState.tokens;
       let tocBody = "";
       let currentLevel = 0;
-      for (let i = 1; i < tokens.length; ++i) {
+      for (let i = 0; i < tokens.length; ++i) {
         const token = tokens[i];
         if (token.type === "heading_open") {
           const level = parseInt(token.tag.substr(1, 1));
