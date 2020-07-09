@@ -21,7 +21,7 @@ export function getPreviewer(azdoInfo: AzDOGUIDInfo) {
     });
 
     // Table of Contents Support
-    md.renderer.rules.azdoTOC = () => {
+    md.renderer.rules.azdoTOC = (_1, _2, options, env, renderer) => {
       const tokens = globalState.tokens;
       let tocBody = "";
       let currentLevel = 0;
@@ -30,11 +30,11 @@ export function getPreviewer(azdoInfo: AzDOGUIDInfo) {
         if (token.type === "heading_open") {
           const level = parseInt(token.tag.substr(1, 1));
           if (level > currentLevel) {
-            tocBody += "<ul>";
+            tocBody += "<ul>".repeat(level - currentLevel);
           } else if (level == currentLevel) {
             tocBody += "</li>";
           } else {
-            tocBody += "</li></ul>";
+            tocBody += "</li>" + "</ul>".repeat(currentLevel - level);
           }
           tocBody += "<li>";
           currentLevel = level;
@@ -42,9 +42,9 @@ export function getPreviewer(azdoInfo: AzDOGUIDInfo) {
           token.type === "inline" &&
           tokens[i - 1].type === "heading_open"
         ) {
-          tocBody += `<a href="#${slugify(token.content)}">${
+          tocBody += `<a href="#${slugify(
             token.content
-          }</a>`;
+          )}">${renderer.renderInline(token.children!, options, env)}</a>`;
         }
       }
       for (; currentLevel > 0; --currentLevel) {
