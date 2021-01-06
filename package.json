@@ -71,7 +71,7 @@
 		"vsce": "^1.77.0"
 	},
 	"dependencies": {
-		"axios": "^0.19.2",
+		"axios": "^0.21.1",
 		"markdown-it-emoji": "^1.4.0"
 	}
 }
