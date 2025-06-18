@@ -1,8 +1,8 @@
-# Azure DevOps Wiki Markdown
+# NI Markdown Tools for Microsoft Azure DevOps Wiki Files
 
 ![Build](https://github.com/ni/vscode-azdo-wiki-md-extension/workflows/Build/badge.svg)
 
-A VS Code extension that makes your local editing of Azure DevOps Wiki files easier.
+A VS Code extension that makes your local editing of Microsoft Azure DevOps Wiki files easier.
 
 # Features
 
