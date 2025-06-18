@@ -1,4 +1,4 @@
-# NI Markdown Editor for Microsoft Azure DevOps Wiki Files
+# NI Markdown Tools for Microsoft Azure DevOps Wiki Files
 
 ![Build](https://github.com/ni/vscode-azdo-wiki-md-extension/workflows/Build/badge.svg)
 
