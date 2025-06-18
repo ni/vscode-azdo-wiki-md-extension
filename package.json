@@ -9,7 +9,7 @@
 		"Azure DevOps",
 		"wiki"
 	],
-	"icon": "docs/logo128.png",
+	"icon": "docs/logo.png",
 	"publisher": "ni",
 	"license": "MIT",
 	"repository": {
